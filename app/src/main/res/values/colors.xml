@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#052746</color>
+    <color name="colorPrimaryDark">#052746</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="splash_screen">#05294A</color>
+    <color name="yalow">#FFA952</color>g
+
+    <color name="color_inactive">#B5525C</color>
+    <color name="color_active">#074262</color>
+
+    <color name="twitter_blue">#FFA952</color>
+    <color name="deep_gray">#F6F6F6</color>
+    <color name="traspornt">#00FFFFFF</color>
+    <color name="tab_selected">#FFA952</color>
+</resources>

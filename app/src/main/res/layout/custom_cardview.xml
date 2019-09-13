@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView app:cardCornerRadius="10dp"
+    android:background="#E3E7EA"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_item"
+        android:textSize="18sp"
+        android:textColor="#333842"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerInParent="true"
+        android:text="@string/dummy_quote"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_below="@+id/text_item"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_heart"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="heart.json"
+            app:lottie_loop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+<TextView
+    android:id="@+id/tag_category"
+    android:background="@drawable/ic_tag_philo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"/>
+</RelativeLayout>
+</android.support.v7.widget.CardView>

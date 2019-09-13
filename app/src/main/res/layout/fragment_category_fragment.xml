@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:background="?android:windowBackground"
+    tools:context=".Fragments.Category_fragment">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:background="#E3E7EA"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_item_card"
+                android:textSize="16sp"
+                android:textColor="#333842"
+                android:textAlignment="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_centerInParent="true"
+                android:text="@string/dummy_quote"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_below="@+id/text_item_card"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/spark_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:sparkbutton_activeImage="@drawable/ic_like_pers"
+                    app:sparkbutton_inActiveImage="@drawable/ic_like"
+                    app:sparkbutton_iconSize="20dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+                <TextView
+                    android:layout_marginRight="27dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/spark_button"
+                    android:id="@+id/like_count"
+                    android:text="12k"
+                    android:textColor="#B5525C"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tag_category"
+                android:background="@drawable/ic_tag_philo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</FrameLayout>

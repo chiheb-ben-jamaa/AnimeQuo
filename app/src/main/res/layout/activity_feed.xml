@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Feed">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@drawable/ic_toolbar_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="center"
+                android:visibility="visible"
+                android:id="@+id/mini_logo"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_logo"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+<LinearLayout
+    android:layout_centerVertical="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/menu_animate"
+        app:lottie_fileName="menu_animation.json"
+        android:layout_alignParentLeft="true"
+        android:layout_width="28dp"
+        android:layout_height="28dp" />
+
+
+
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_alignParentRight="true"
+    android:layout_marginLeft="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_marginBottom="20dp"
+        android:id="@+id/search_animate"
+        app:lottie_fileName="search_animation.json"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</LinearLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/body_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="90dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints">
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_centerInParent="true"
+            android:id="@+id/viewpager_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:id="@+id/bottom_Nav_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:paddingTop="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="5dp"
+            app:tabIndicatorColor="@color/traspornt"
+            android:theme="@style/AppTheme.ActionBar"
+            android:background="@drawable/ic_menu_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          />
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layer_search"
+        android:visibility="invisible"
+        android:background="@drawable/ic_layer_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <RelativeLayout
+            android:id="@+id/lir_layer1"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_layer"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoe_ui"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="@string/text_layer"
+                android:textColor="#05294A"
+                android:textSize="22sp" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/checkicon_search_animation"
+                android:visibility="visible"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center_horizontal"
+                android:background="@drawable/ic_check_mark_icon"
+                android:layout_marginRight="10dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                app:lottie_autoPlay="false"
+                app:lottie_fileName="check_mark_bleu_animation.json"
+                app:lottie_loop="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/lir_layer2"
+            android:layout_below="@+id/lir_layer1"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:id="@+id/search_input"
+                android:background="@drawable/search_bg"
+                android:hint="@string/Search_input"
+                android:paddingTop="4dp"
+                android:gravity="left|center_vertical"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#ffff"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginEnd="10dp"
+                android:paddingLeft="20dp"
+                android:drawableRight="@drawable/ic_search_icon"
+                android:paddingRight="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layer_category_tag"
+        android:visibility="invisible"
+        android:background="@drawable/ic_tag_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_tag_layer"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_layer_tag"
+                android:textColor="#05294A"
+                android:text="@string/text_layer_tag"
+                android:fontFamily="@font/segoe_ui"
+                android:textSize="24sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:visibility="visible"
+                android:id="@+id/check_icon_animation"
+                android:background="@drawable/ic_check_mark_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                app:lottie_autoPlay="false"
+                app:lottie_fileName="check_mark_bleu_animation.json"
+                app:lottie_loop="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/text_select"
+            android:layout_below="@+id/relative_tag_layer"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_selcted"
+                android:fontFamily="@font/segoe_ui"
+                android:textSize="18dp"
+                android:text="@string/text_select"
+                android:layout_marginLeft="20dp"
+                android:textColor="#B6BDC7"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_icon_tag_layer"
+            android:layout_below="@+id/text_select"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+
+
+
+               <HorizontalScrollView
+                   android:id="@+id/category_list"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:scrollbars="none">
+
+               <RadioGroup
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/category_radio_group1"
+                   android:layout_marginRight="10dp"
+                   android:layout_width="match_parent"
+                   android:gravity="center"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/death_tag"
+                android:background="@drawable/anim_death_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"/>
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/love_tag"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/anim_love_tag"
+                android:button="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/motivition_tag"
+                    android:button="@null"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/anim_motivition_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/funny_tag"
+                    android:button="@null"
+                    android:background="@drawable/anim_funny_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"/>
+               </RadioGroup>
+               </HorizontalScrollView>
+                <RadioGroup
+                    android:id="@+id/category_radio_group2"
+                    android:layout_below="@+id/category_list"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/regrets_tag"
+                    android:button="@null"
+                    android:background="@drawable/anim_regrets_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/philo_tag"
+                    android:button="@null"
+                    android:background="@drawable/anim_philo_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/dark_tag"
+                    android:background="@drawable/anim_dark_tag"
+                    android:button="@null"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </RadioGroup>
+
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/coiped_layer"
+        android:background="@drawable/ic_copied_layer_bg"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_marginLeft="25dp"
+    android:layout_centerInParent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView
+            android:paddingLeft="25dp"
+            android:id="@+id/copied_animation"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="copied_animation.json"
+            app:lottie_loop="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

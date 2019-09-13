@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AnimeQuo</string>
+    <string name="username">Username</string>
+    <string name="Email">E-mail</string>
+    <string name="Search_input">Search</string>
+    <string name="passwrod">Password</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Empty"> </string>
+    <string name="text_layer">Find a Quote !</string>
+    <string name="text_layer_tag">Choose Category</string>
+    <string name="text_select">Select </string>
+
+
+
+
+    <string name="text_item_them">”" Man seeks peace, yet at the same time yearning for war... Those are the two realms belonging solely to man. "”</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_lottie_nv_bar">Lottie_nv_bar</string>
+    <string name="dummy_quote">\" Man seeks peace, yet at the same time yearning for war... Those are the two realms belonging solely to man. ”</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.About_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+<RelativeLayout
+    android:id="@+id/relative_about"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_alignParentRight="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/feedback_animation"
+        android:layout_width="240dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="140dp"
+        android:layout_gravity="right"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="optimise_our_app.json"
+        app:lottie_loop="true"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linr_about"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="25dp"
+        android:padding="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/text_about_us"
+                    android:background="@drawable/ic_who_we_are_text"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+
+
+
+    </ScrollView>
+</FrameLayout>
